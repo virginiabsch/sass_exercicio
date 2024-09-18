@@ -1,0 +1,29 @@
+// IMPORTS
+@use 'config/reset';
+@use 'secoes/body';
+@use 'secoes/header';
+@use 'secoes/products';
+@use 'config/variables';
+
+
+@media screen and (max-width: variables.$tablet) {
+.container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: variables.$mobile) {
+    .products {
+        display: block;
+    }
+
+    .product-item  {
+        margin-bottom: 32px;
+    }
+}
+
